@@ -1,0 +1,52 @@
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0;
+    font-family: segoe ui,trebuchet MS,Lucida Sans Unicode,Lucida Sans,Sans-Serif;
+    font-weight: 500;
+    -webkit-text-size-adjust: none;
+    background-color: #fff
+}
+
+#ErrorLabel {
+    background-color: red;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+textarea {
+    background-color: #fff;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
+
+.grid-container input {
+    background-color: #fff;
+    border: 2px solid #acacac;
+    border-radius: 5px;
+    height: 30px;
+}
+
+button {
+    background-color: #fff;
+    border: 2px solid #acacac;
+    border-radius: 5px; 
+    height: 30px; 
+}
+
+.grid-container {
+    margin-top: 25px;
+    display: grid;
+    width: 400px;
+    grid-template-columns: repeat(2, 2fr);  
+    grid-template-rows: auto;               
+    gap: 10px;                              
+    background-color: #fff;
+    padding: 20px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+}
