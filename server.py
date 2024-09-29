@@ -31,9 +31,13 @@ def generate_id():
 
 @app.route('/generate', methods=['POST'])
 def generate_file():
-    new_id = generate_id()
     filename = request.json.get('filename')
     content = request.json.get('content')
+    
+    if content or filename == None:
+        return jsonify({"error": "All fields required"}), 400
+    
+    new_id = generate_id()
 
     file_path = os.path.join(OUTPUT_DIR, f"{new_id}.html")
     with open(file_path, 'w', encoding='utf-8') as f:
